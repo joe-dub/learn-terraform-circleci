@@ -14,7 +14,7 @@ backend "s3" {
 
 provider "aws" {
   region = var.region
-  profile = "playground"
+  #profile = "playground"
 }
 
 provider "template" {
