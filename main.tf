@@ -6,8 +6,15 @@ terraform {
   }
 }
 
+backend "s3" {
+  bucket = "edb3c75f-8386-7d5e-8938-9c84759142e0-backend"
+  key = "terraform/webapp/terraform.tfstate"
+  region = "us-east-1"
+}
+
 provider "aws" {
   region = var.region
+  profile = "playground"
 }
 
 provider "template" {
